@@ -8,6 +8,5 @@ def apply_discount(price: float, percent: float) -> float:
 
 def checkout_total(items: list[float], discount_percent: float) -> float:
     """Sum the cart and apply the discount once."""
-    subtotal = sum(apply_discount(p, discount_percent) for p in items)
-    # BUG: the discount was already applied per item above.
+    subtotal = sum(items)
     return round(apply_discount(subtotal, discount_percent), 2)
